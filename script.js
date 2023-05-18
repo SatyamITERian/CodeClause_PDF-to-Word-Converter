@@ -12,12 +12,12 @@ function convertToWord() {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://v2.convertapi.com/convert/pdf/to/txt?Secret=your-api-secret&download=attachment', true);
     xhr.onreadystatechange = function () {
-      if (xhr.status === 200) {
+      if (xhr.status === 401) {
       var responseText = xhr.responseText;
       // Use the responseText as needed
       document.getElementById('result').innerHTML = 'Conversion completed. <a href="' + xhr.responseText + '">Download Word file</a>';
     } else {
-        document.getElementById('result').innerHTML ='Request failed with status code ' + xhr.status;
+        document.getElementById('result').innerHTML ='Request failed with error code ' + xhr.status;
     }
     };
     xhr.send(file);
