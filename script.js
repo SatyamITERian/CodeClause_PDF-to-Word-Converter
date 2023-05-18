@@ -20,7 +20,7 @@ function convertToWord() {
       // Use the responseText as needed
       document.getElementById('result').innerHTML = 'Conversion completed. <a href="' + xhr.responseText + '">Download Word file</a>';
     } else {
-        document.getElementById('result').innerHTML ='Request failed with status code ' + xhr.status+xhr.message;
+        document.getElementById('result').innerHTML ='Request failed with status code ' + xhr.status;
     }
     };
     xhr.send(file);
