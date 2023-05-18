@@ -12,9 +12,6 @@ function convertToWord() {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://v2.convertapi.com/convert/pdf/to/txt?Secret=your-api-secret&download=attachment', true);
     xhr.onreadystatechange = function () {
-         if (xhr.readyState === 4) {
-      var resultDiv = document.getElementById('result');
-
       if (xhr.status === 200) {
       var responseText = xhr.responseText;
       // Use the responseText as needed
